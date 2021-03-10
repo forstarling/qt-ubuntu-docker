@@ -16,7 +16,7 @@ RUN apt-get install --yes libasound2-dev \
                           libgstreamer-plugins-bad1.0-dev
 RUN apt-get install --yes qt5-default
 RUN apt-get install --yes libqt5quick5 libqt5xml5 libqt5websockets5-dev libqt5multimedia5 libqt5dbus5 libqt5widgets5
-RUN apt-get install --yes qtdeclarative5-dev 
+RUN apt-get install --yes qtdeclarative5-dev qtmultimedia5-dev
 RUN apt-get install --yes libglib2.0-dev libnm-dev
 # RUN git clone git://code.qt.io/qt/qt5.git && \
 #     cd qt5 && \
