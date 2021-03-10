@@ -17,7 +17,7 @@ RUN apt-get install --yes libasound2-dev \
 RUN apt-get install --yes qt5-default
 RUN apt-get install --yes libqt5quick5 libqt5xml5 libqt5websockets5-dev
 RUN apt-get install --yes qtdeclarative5-dev 
-RUN apt-get install --yes libglib2.0-dev
+RUN apt-get install --yes libglib2.0-dev libnm-dev
 # RUN git clone git://code.qt.io/qt/qt5.git && \
 #     cd qt5 && \
 #     git checkout 5.15.2 && \
