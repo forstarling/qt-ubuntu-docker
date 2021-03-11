@@ -27,9 +27,16 @@ RUN add-apt-repository --yes ppa:beineri/opt-qt-5.15.2-bionic && \
 	apt-get update
 RUN apt-get install --yes qt515base 
 RUN apt-get install --yes qt515websockets qt515xmlpatterns qt515multimedia qt515declarative
-RUN echo "source /opt/qt515/bin/qt515-env.sh" >> /etc/bash.bashrc
-RUN echo "export CPLUS_INCLUDE_PATH=/tima-ui/Libs/NetworkManagerQt/include/:/tima-ui/Libs/NetworkManagerQt/include/KF5/NetworkManagerQt/networkmanagerqt/" >> /etc/bash.bashrc
-RUN echo "export PATH=$PATH:/opt/qt515/bin/"
+
+#RUN echo "source /opt/qt515/bin/qt515-env.sh" >> /etc/bash.bashrc
+#RUN echo "export CPLUS_INCLUDE_PATH=/tima-ui/Libs/NetworkManagerQt/include/:/tima-ui/Libs/NetworkManagerQt/include/KF5/NetworkManagerQt/networkmanagerqt/" >> /etc/bash.bashrc
+#RUN echo "export PATH=$PATH:/opt/qt515/bin/" >> /etc/basg.bashrc
+
+ENV QTDIR=/opt/qt515
+ENV PATH=/opt/qt515/bin:$PATH
+ENV LD_LIBRARY_PATH=/opt/qt515/lib/x86_64-linux-gnu:/opt/qt515/lib:$LD_LIBRARY_PATH
+ENV PKG_CONFIG_PATH=/opt/qt515/lib/pkgconfig:$PKG_CONFIG_PATH
+
 # RUN git clone git://code.qt.io/qt/qt5.git && \
 #     cd qt5 && \
 #     git checkout 5.15.2 && \
