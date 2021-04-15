@@ -26,7 +26,7 @@ RUN apt-get install --yes software-properties-common
 RUN add-apt-repository --yes ppa:beineri/opt-qt-5.15.2-bionic && \
 	apt-get update
 RUN apt-get install --yes qt515base 
-RUN apt-get install --yes qt515websockets qt515xmlpatterns qt515multimedia qt515declarative
+RUN apt-get install --yes qt515websockets qt515xmlpatterns qt515multimedia qt515declarative  qt515virtualkeyboard-no-lgpl
 
 #RUN echo "source /opt/qt515/bin/qt515-env.sh" >> /etc/bash.bashrc
 #RUN echo "export CPLUS_INCLUDE_PATH=/tima-ui/Libs/NetworkManagerQt/include/:/tima-ui/Libs/NetworkManagerQt/include/KF5/NetworkManagerQt/networkmanagerqt/" >> /etc/bash.bashrc
